@@ -11,3 +11,11 @@ class Aleatorio:
         return (self.siguiente())%limite
     
 
+class Regla:
+    def __init__(self, izquierda, derecha):
+        self.left = izquierda
+        self.right = derecha
+        self.cont = 1
+    def __repr__(self):
+        return f"{self.cont} {self.left} -> {' '.join(self.right)}"
+    
